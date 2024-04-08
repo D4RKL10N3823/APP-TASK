@@ -22,7 +22,7 @@ function createTask() {
             due_date: due_date,
         };
     
-        fetch('http://d4rkl10n3823.pythonanywhere.com/tasks', {
+        fetch('https://d4rkl10n3823.pythonanywhere.com/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

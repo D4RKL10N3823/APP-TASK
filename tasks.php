@@ -19,7 +19,7 @@ if(isset($_POST['logout'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/toastr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/tasks.css">
     <title>Tasks</title>
 </head>
 <body>
@@ -45,7 +45,7 @@ if(isset($_POST['logout'])){
 
     <script src="js/toastr.js"></script>
     <script src="js/toastr.min.js"></script>
-    <script src="js/show.js"></script>
+    <script src="js/shows.js"></script>
     
 </body>
 </html>

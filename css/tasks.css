@@ -1,11 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
     list-style: none;
 }
 
 body {
-    background-color: #e8e8e8;
     margin: 0;
+    background-color: #e8e8e8;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
     justify-content: end;
     background-color: #4f46e5;
     padding: 0.5rem;
-    width: 99.2%;
+    width: 99.2;
     top: 0;
 }
 
@@ -32,7 +33,6 @@ header {
 .nav-list li a {
     color: rgb(249, 249, 249);
     padding: 2rem;
-    text-decoration: none;
 }
 
 .nav-list li:hover a {
@@ -51,9 +51,31 @@ header {
     margin-top: -10%;
 }
 
-#form {
-    margin: 0 auto;
-    max-width: 450px;
+select {
+    margin-bottom: 5%;
+    height: 27px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: -10%;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 5%;
+    height: 27px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: -10%;
+    text-align: center;
+}
+
+.div {
+    display: inline-block;
+    margin-left: 2%;
+    max-width: 350px;
+    width: 350px;
     padding:1rem;
     border-radius: 0.5rem;
     margin-top: 2%;
@@ -61,43 +83,33 @@ header {
     background-color: #ffff;
 }
 
-#form h2 {
-    text-align: center;
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
-#form input, form textarea,form select {
-    margin-bottom: 5%;
-    width: 96%;
-    height: 25px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #e5e7eb;
-    outline: none;
-    text-align: center;
-}
-
-#form textarea {
-    min-height: 50px;
-    text-align: start;
-}
-
-#form button {
-    padding: 10px 13px;
-    border-radius: 5px;
-    width: 100%;
-    border: none;
-    background-color: #4f46e5;
+.button-container a {
     color: white;
-    font-size: 17px;
+    text-decoration: none;
+    margin-left: 10px; 
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.signup-link {
-    color: #6B7280;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-align: center;
+.edit {
+    background-color: #1A4580;
 }
-  
-.signup-link a {
-    text-decoration: underline;
+
+.delete {
+    background-color: #D71010;
 }
+
+@media screen and (max-width: 600px) {
+    .div {
+        margin-left: 1%;
+    }
+}
+

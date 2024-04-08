@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function getTasks() {
     const filterValue = document.getElementById('filter').value;
-
-    fetch('http://d4rkl10n3823.pythonanywhere.com/tasks')
+    fetch('https://d4rkl10n3823.pythonanywhere.com/tasks')
     .then(response => response.json())
     .then(data => {
         const tasksContainer = document.getElementById('tasks');
@@ -22,6 +21,17 @@ function getTasks() {
                 const taskDiv = document.createElement('div');
                 taskDiv.classList.add('div')
                 taskDiv.classList.add('task');
+
+                // Const of the difference of the due date and the current date
+                const dueDateDiff = new Date(task.due_date) - new Date();
+                // Add priority based on the current date and the due date
+                var priority = dueDateDiff <= 2 * 24 * 60 * 60 * 1000 ? 'High ' : dueDateDiff <= 5 * 24 * 60 * 60 * 1000 ? 'Medium' : 'Low';
+
+                const taskPriority = document.createElement('p');
+                taskPriority.textContent = priority;
+                taskPriority.style.textAlign = 'end';
+                taskPriority.style.color = '#4f46e5';
+                taskDiv.appendChild(taskPriority);
 
                 // Create an h3 element for the task title
                 const title = document.createElement('h3');
@@ -78,7 +88,7 @@ function getTasks() {
 
 
 function deleteTask(id) {
-    fetch(`http://d4rkl10n3823.pythonanywhere.com/tasks/${id}`, {
+    fetch(`https://d4rkl10n3823.pythonanywhere.com/tasks/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'

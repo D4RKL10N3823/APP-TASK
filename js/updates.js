@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    fetch(`http://d4rkl10n3823.pythonanywhere.com/tasks/${id}`)
+    fetch(`https://d4rkl10n3823.pythonanywhere.com/tasks/${id}`)
     .then(response => response.json())
     .then(data => {
         // Add the values in the inputs
@@ -41,7 +41,7 @@ function updateTask(id) {
         status: status
     };
 
-    fetch(`http://d4rkl10n3823.pythonanywhere.com/tasks/${id}`, {
+    fetch(`https://d4rkl10n3823.pythonanywhere.com/tasks/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
