@@ -1,0 +1,99 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    background-color: #e8e8e8;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    background-color: #4f46e5;
+    padding: 0.5rem;
+    width: 99.2;
+    top: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li:hover {
+    border-bottom:1px solid #cdcbee;
+    color: white;
+    cursor: pointer;
+    transition: border-bottom 1s, color 1s;
+}
+
+.nav-list li a {
+    color: rgb(249, 249, 249);
+    padding: 2rem;
+}
+
+.nav-list li:hover a {
+    color: white
+}
+
+.nav-list li button {
+    background-color: #D71010;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -10%;
+}
+
+select {
+    margin-bottom: 5%;
+    height: 27px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: -10%;
+    text-align: center;
+}
+
+.div {
+    display: inline-block;
+    margin-left: 2%;
+    max-width: 350px;
+    width: 350px;
+    padding:1rem;
+    border-radius: 0.5rem;
+    margin-top: 2%;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: #ffff;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px; 
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #1A4580;
+}
+
+.delete {
+    background-color: #D71010;
+}
+
