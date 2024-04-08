@@ -20,14 +20,14 @@ if(isset($_POST['logout'])){
     <link rel="stylesheet" href="css/toastr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/task.css">
-    <title>Tasks</title>
+    <title>Personal Tasks</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <ul class="nav-list">
                 <li><a href="create.php">Create</a></li>
-                <li><a href="personal_tasks.php">MyTasks</a></li>
+                <li><a href="tasks.php">Tasks</a></li>
                 <li><select id="filter">
                     <option value="all" selected>All</option>
                     <option value="to_do">To Do</option>
@@ -39,15 +39,18 @@ if(isset($_POST['logout'])){
         </nav>
     </header>
 
-    <h2>General Tasks</h2>
+    <input hidden type="text" value="<?php echo $_SESSION['name'];?>" id="name">
+    
+    <h2>My Tasks</h2>
     <main id="tasks">
+    
 
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script src="js/toastr.js"></script>
     <script src="js/toastr.min.js"></script>
-    <script src="js/show.js"></script>
+    <script src="js/show_personal.js"></script>
     
 </body>
 </html>

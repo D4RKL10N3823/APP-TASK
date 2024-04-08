@@ -1,4 +1,6 @@
 <?php 
+require_once 'db_connection.php';
+
 session_start();
 
 if (!isset($_SESSION['email']) || $_SESSION['email'] == "") {
@@ -45,6 +47,19 @@ if(isset($_POST['logout'])){
             <label>Due Date</label>
             <br>
             <input id="due_date" type="date">
+            <br>
+            <label>Member Team</label>
+            <br>
+            <select id="member_team">
+                <option value="all" selected>All</option>
+                <?php 
+                    $query = $cnnPDO->prepare('SELECT * FROM user');
+                    $query->execute();
+                    while($user = $query->fetch()){
+                        echo '<option>'.$user['name'].'</option>';
+                    }
+                ?>
+            </select>
             <br>
             <button type="submit">Add</button>
         </form>

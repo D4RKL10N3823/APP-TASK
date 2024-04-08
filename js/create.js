@@ -12,14 +12,16 @@ function createTask() {
     const title = document.getElementById('title').value;
     const description = document.getElementById('desc').value;
     const due_date = document.getElementById('due_date').value;
+    const member_team = document.getElementById('member_team').value;
 
     // Check if all fields are filled
-    if(title !== '' && description !== '' && due_date !== ''){
+    if(title !== '' && description !== '' && due_date !== '' && member_team !== ''){
         // Create updated task object
         const newTask = {
             title: title,
             description: description,
             due_date: due_date,
+            member_team: member_team,
         };
     
         fetch('https://d4rkl10n3823.pythonanywhere.com/tasks', {
@@ -37,6 +39,7 @@ function createTask() {
             document.getElementById('title').value = '';
             document.getElementById('desc').value = '';
             document.getElementById('due_date').value = '';
+            document.getElementById('member_team').value = '';
         })
     
         .catch(error => {
